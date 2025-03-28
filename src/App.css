@@ -34,7 +34,7 @@ svg {
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
-  font-family: Roboto;
+  font-family: Roboto !important;
 }
 
 .background-wrapper {
@@ -106,9 +106,20 @@ h1 {
   position: relative;
   max-width: 600px;
   font-size: 1.5rem;
-  font-family: Abeezee;
   font-weight: 500;
   border-radius: 1rem;
+}
+
+.card-back {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  opacity: 0.25;
+  z-index: 0;
 }
 
 .foreground-wrapper {
