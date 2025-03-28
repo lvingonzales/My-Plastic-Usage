@@ -1,0 +1,30 @@
+.image {
+  width: 200px;
+}
+
+.image.foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image.background {
+  opacity: 40%;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-items: center;
+}
+
+@keyframes clipPathBottle {
+  from {
+    clip-path: rect(100% 100% 100% 0%);
+  }
+  to {
+    clip-path: rect(18% 100% 100% 0%);
+  }
+}
+
+

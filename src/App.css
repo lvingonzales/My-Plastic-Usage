@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #20A4F3;
+  --secondary-color: #4CE0D2;
+  --bg-color: #fff;
+  --heading-color: #1B1B1B;
+  --font-color: #424242;
+  --red-color: #B40000;
+  --blue-color: #022D7F;
+  --green-color: #066100;
+  --purple-color: #9C1593;
+  --yellow-color: #58561A;
+  --static-white: #fff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #20A4F3;
+  --secondary-color: #4CE0D2;
+  --bg-color: #1B1B1B;
+  --heading-color: #fff;
+  --font-color: #F3FCF0;
+  --red-color: #FF3333;
+  --green-color: #6BFC61;
+  --purple-color: #FF8CF7;
+  --yellow-color: #FFE449;
+  --blue-color: #78A8FF;
+}
+
+svg {
+  transition: all 0.4s;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: Roboto;
+}
+
+.background-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+em {
+  cursor: pointer;
+}
+
+h1 {
+  color: var(--heading-color);
+}
+
+.gradient {
+  height: 50px;
+  width: 1000px;
+  background: linear-gradient(0.25turn, var(--font-color), var(--primary-color));
+  animation: 4s ease-in-out infinite alternate clipPath;
+  margin-bottom: 20px;
+}
+
+@keyframes clipPath {
+  from {
+    clip-path: rect(0% 100% 100% 0% );
+  }
+  to {
+    clip-path: rect(0% 0% 100% 0% );
+  }
+}
+
+.amount {
+  aspect-ratio: 1 / 1;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0px;
+    z-index: 1;
+    position: relative;
+    color: var(--static-white);
+  }
+}
+
+.card-container {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card {
+  position: relative;
+  max-width: 600px;
+  font-size: 1.5rem;
+  font-family: Abeezee;
+  font-weight: 500;
+  border-radius: 1rem;
+}
+
+.foreground-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+
+.interactable {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  border: 2px solid var(--font-color);
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+}
+
+.interactable:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+#info {
+  height: 100vh;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 4rem;
+}
+
+.tut-card {
+  max-width: 600px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
