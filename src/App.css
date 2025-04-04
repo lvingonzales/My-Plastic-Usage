@@ -5,7 +5,7 @@
   --secondary-color: #4CE0D2;
   --bg-color: #fff;
   --heading-color: #1B1B1B;
-  --font-color: #424242;
+  --font-color: #2b2b2b;
   --red-color: #B40000;
   --blue-color: #022D7F;
   --green-color: #066100;
@@ -20,7 +20,7 @@
   --bg-color: #1B1B1B;
   --heading-color: #fff;
   --font-color: #F3FCF0;
-  --red-color: #FF3333;
+  --red-color: #FF3179;
   --green-color: #6BFC61;
   --purple-color: #FF8CF7;
   --yellow-color: #FFE449;
@@ -48,6 +48,7 @@ body {
 
 em {
   cursor: pointer;
+  font-size: 2.25rem;
 }
 
 h1 {
