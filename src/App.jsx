@@ -111,8 +111,9 @@ function App() {
   });
 
   useEffect(() => {
-    if (cardVisible) {
+    if (cardVisible) {  
       highlight(card.current.dataset.focus);
+      console.log("Showing:", card.current)
     } else if (isLoaded && !cardVisible) {
       clearEffect();
     }
@@ -310,40 +311,30 @@ function App() {
             separated into{" "}
             <em
               style={{ color: `var(--red-color)` }}
-              onMouseOver={() => highlight("bottle")}
-              onMouseLeave={() => clearEffect()}
             >
               Food Consumption
             </em>
             ,{" "}
             <em
               style={{ color: `var(--blue-color)` }}
-              onMouseOver={() => highlight("hammer")}
-              onMouseLeave={() => clearEffect()}
             >
               Work
             </em>
             ,{" "}
             <em
               style={{ color: `var(--purple-color)` }}
-              onMouseOver={() => highlight("face")}
-              onMouseLeave={() => clearEffect()}
             >
               Personal Comfort
             </em>
             ,{" "}
             <em
               style={{ color: `var(--green-color)` }}
-              onMouseOver={() => highlight("wrench")}
-              onMouseLeave={() => clearEffect()}
             >
               Maintenance
             </em>
             , and{" "}
             <em
               style={{ color: `var(--yellow-color)` }}
-              onMouseOver={() => highlight("screen")}
-              onMouseLeave={() => clearEffect()}
             >
               Entertainment
             </em>
@@ -352,7 +343,7 @@ function App() {
         </Card>
         <Card>
           <p>
-            To start with lets look at Each purpose's{" "}
+            To start with lets look at each purpose's{" "}
             <button className="interactable" onClick={itemsByPurpose}>
               share
             </button>{" "}
@@ -361,20 +352,20 @@ function App() {
         </Card>
         <Card reference={card} focus={"hammer"}>
           <p>
-            <em style={{ color: `var(--blue-color)`, fontSize: `2.5rem` }}>
+            <em style={{ color: `var(--blue-color)` }}>
               Work
             </em>{" "}
             had the highest number of individual plastic items at{" "}
-            <em style={{ color: `var(--blue-color)`, fontSize: `2.25rem` }}>
+            <em style={{ color: `var(--blue-color)`}}>
               19 out of 57
             </em>{" "}
             accounting for some{" "}
-            <em style={{ color: `var(--blue-color)`, fontSize: `2.25rem` }}>
+            <em style={{ color: `var(--blue-color)` }}>
               34%
             </em>{" "}
             of the total. These plastics mainly included{" "}
-            <em style={{fontSize: "1.5rem"}}>High Density Polyethylene</em> or HDPE, a common food safe
-            recyclable plastic (more on this later).
+            <em style={{fontSize: "1.5rem"}}>Acrylonitrile Butadiene Styrene</em> or ABS, a common
+            recyclable plastic used in electronics.
           </p>
         </Card>
       </div>
