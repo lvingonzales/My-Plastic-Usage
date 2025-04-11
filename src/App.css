@@ -27,8 +27,17 @@
   --blue-color: #78A8FF;
 }
 
+* {
+  transition: clip-path 0.4s;
+}
 svg {
-  transition: all 0.4s;
+  transition: fill 0.4s;
+}
+
+.pieChart {
+  path {
+    transition: all 0.4s;
+  }
 }
 
 body {
@@ -90,6 +99,10 @@ h1 {
     position: relative;
     color: var(--static-white);
   }
+}
+
+.section {
+  position: relative;
 }
 
 .card-container {
